@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs 
+  labels:
+    app: fb-rs
+
+spec:
+  selector:
+    matchLabels:
+      app: fb 
+  replicas: 3
+  template:
+    metadata:
+      name: fb-pod1
+      labels:
+        app: fb 
+    spec:
+      containers:
+        - name: fb-cont-1
+          image: tomcat
+        - name: fb-cont-2
+          image: ubuntu

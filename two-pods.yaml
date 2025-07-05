@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: two-pods
+  labels:
+    app: fb-pod
+
+spec:
+  containers:
+    - name: two-cont-1
+      image: tomcat
+    - name: two-cont-2
+      image: ubuntu

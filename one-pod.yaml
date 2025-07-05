@@ -1,0 +1,13 @@
+all.json
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: one-pod
+  labels:
+    app: fb-pod
+
+spec:
+  containers:
+    - name: one-cont
+      image: tomcat
